@@ -53,10 +53,10 @@
                 </div>
 
             </div>
-            <section id="slider">
+            <div id="slider">
                 <div class="slider-content">
 
-                    <div class="image" data-href="#">
+                    <div class="image" data-href="#place">
                         <div class="slider-item">
                             <div class="item-img-1" data-src="img1.jpg"></div>
                             <div class="item-img-2" data-src="img1.jpg"></div>
@@ -67,7 +67,7 @@
                             PLACE
                         </span>
                     </div>
-                    <div class="image" data-href="#">
+                    <div class="image" data-href="#topics">
                         <div class="slider-item">
                             <div class="item-img-1" data-src="img2.jpg"></div>
                             <div class="item-img-2" data-src="img2.jpg"></div>
@@ -75,7 +75,7 @@
                         </div>
                         <span class="image-text">TOPICS</span>
                     </div>
-                    <div class="image" data-href="#">
+                    <div class="image" data-href="#dates">
                         <div class="slider-item">
                             <div class="item-img-1" data-src="img3.jpg"></div>
                             <div class="item-img-2" data-src="img3.jpg"></div>
@@ -83,7 +83,7 @@
                         </div>
                         <span class="image-text">DATES</span>
                     </div>
-                    <div class="image image-last" data-href="#">
+                    <div class="image image-last" data-href="#dates">
                         <div class="slider-item">
                             <div class="item-img-1" data-src="img4.jpg"></div>
                             <div class="item-img-2" data-src="img4.jpg"></div>
@@ -92,16 +92,85 @@
                         <span class="image-text">SPONSORS</span>
                     </div>
                 </div>
-            </section>
-            <a href="#topics" class="bajar">
+            </div>
+            <a href="javascript:void(0)" onclick="goToTag(this)" data-href="#place" class="bajar">
                 <svg>
-                    <use xlink:href="#flechas-blancas"></use>
-                </svg>
+                        <use xlink:href="#flechas-blancas"></use>
+                    </svg>
             </a>
         </header>
 
 
-        <section id="place"></section>
+        <section id="place">
+            <article class="image">
+                <img src="images/mapa-06.svg" alt="mapa">
+            </article>
+
+            <article class="content">
+                <h2><span class="icon"><img src="images/mapa-06.svg" alt="mapa"></span> PLACE</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae obcaecati delectus velit et quibusdam quidem aliquid ratione, voluptatum nam. </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, eius corrupti! Consequatur eligendi eveniet id, provident esse rerum libero. Architecto, eius. Dolor deleniti maxime blanditiis quasi, dolores inventore saepe quos
+                    voluptates. Consequuntur facilis, laudantium suscipit expedita, et rerum illum aperiam nihil provident eaque porro, repudiandae omnis rem sit adipisci! Facere error alias deserunt eius vero hic delectus natus, quos cum quasi temporibus
+                    maxime vel aliquam repudiandae, ratione reiciendis earum harum. Odit et ullam fugit omnis necessitatibus a deserunt pariatur architecto officia, maxime dolorem corporis nihil magnam eligendi in, officiis exercitationem repudiandae
+                    debitis maiores minima. Repellat saepe distinctio, laboriosam necessitatibus a minima, vel facere recusandae cupiditate modi quos, ex enim. Ipsam architecto culpa rerum repellat ratione odio ut maiores facere omnis. </p>
+            </article>
+            <a href="javascript:void(0)" onclick="goToTag(this)" data-href="#topics" class="bajar">
+                <svg>
+                    <use xlink:href="#flechas-verdes"></use>
+                </svg>
+            </a>
+        </section>
+        <section id="topics">
+            <article class="image">
+                <img src="images/libro-07.svg" alt="libro">
+            </article>
+
+            <article class="content">
+                <h2><span class="icon"><img src="images/libro-07.svg" alt="libro"></span>TOPICS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae obcaecati delectus velit et quibusdam quidem aliquid ratione, voluptatum nam. </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, eius corrupti! Consequatur eligendi eveniet id, provident esse rerum libero. Architecto, eius. Dolor deleniti maxime blanditiis quasi, dolores inventore saepe quos
+                    voluptates. Consequuntur facilis, laudantium suscipit expedita, et rerum illum aperiam nihil provident eaque porro, repudiandae omnis rem sit adipisci! Facere error alias deserunt eius vero hic delectus natus, quos cum quasi temporibus
+                    maxime vel aliquam repudiandae, ratione reiciendis earum harum. Odit et ullam fugit omnis necessitatibus a deserunt pariatur architecto officia, maxime dolorem corporis nihil magnam eligendi in, officiis exercitationem repudiandae
+                    debitis maiores minima. Repellat saepe distinctio, laboriosam necessitatibus a minima, vel facere recusandae cupiditate modi quos, ex enim. Ipsam architecto culpa rerum repellat ratione odio ut maiores facere omnis. </p>
+            </article>
+            <a href="javascript:void(0)" onclick="goToTag(this)" data-href="#dates" class="bajar">
+                <svg>
+                    <use xlink:href="#flechas-blancas"></use>
+                </svg>
+            </a>
+        </section>
+        <section id="dates">
+            <article class="image">
+                <img src="images/calendario-08.svg" alt="">
+            </article>
+
+            <article class="content text-green">
+                <h2><span class="icon"><img src="images/calendario-08.svg" alt=""></span>DATES</h2>
+                <div>
+                    <p class="no-margin">Special Session Proposal /</p>
+                    <p class="no-margin">Paper Submission / Tutorial Submission</p>
+                    <p class="no-margin bold">September 14, 2018</p>
+                    <br>
+                    <p class="no-margin">Notification of acceptance </p>
+                    <p class="no-margin  bold">September 14, 2018</p>
+                    <br>
+                    <p class="no-margin">Camera-ready Submission</p>
+                    <p class="no-margin  bold">September 14, 2018</p>
+                </div>
+
+            </article>
+
+            <article class="content">
+                <div class="separator"></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae obcaecati delectus velit et quibusdam quidem aliquid ratione, voluptatum nam. </p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, eius corrupti! Consequatur eligendi eveniet id, provident esse rerum libero. Architecto, eius. Dolor deleniti maxime blanditiis quasi, dolores inventore saepe quos
+                    voluptates. Consequuntur facilis, laudantium suscipit expedita, et rerum illum aperiam nihil provident eaque porro, repudiandae omnis rem sit adipisci! Facere error alias deserunt eius vero hic delectus natus, quos cum quasi temporibus
+                    maxime vel aliquam repudiandae, ratione reiciendis earum harum. Odit et ullam fugit omnis necessitatibus a deserunt pariatur architecto officia, maxime dolorem corporis nihil magnam eligendi in, officiis exercitationem repudiandae
+                    debitis maiores minima. Repellat saepe distinctio, laboriosam necessitatibus a minima, vel facere recusandae cupiditate modi quos, ex enim. Ipsam architecto culpa rerum repellat ratione odio ut maiores facere omnis. </p>
+            </article>
+
+        </section>
+
 
 
 

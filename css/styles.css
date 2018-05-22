@@ -1,3 +1,9 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Exo', sans-serif;
 }
@@ -13,7 +19,8 @@ main#main {
 
 header#Header {
     position: relative;
-    background: red;
+    background: #407376;
+    overflow: hidden;
 }
 
 .hidden {
@@ -156,6 +163,74 @@ header#Header {
     line-height: 1.5;
 }
 
+.flecha polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.flecha.blanco polyline {
+    stroke: #FFFFFF;
+}
+
+.flecha.verde polyline {
+    stroke: #407376;
+}
+
+section {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+section article {
+    padding: 15px;
+    float: left;
+    width: 50% !important;
+}
+
+section article img {
+    max-width: 500px;
+}
+
+section article.content h2 {
+    font-weight: normal;
+    color: #187477;
+    font-size: 8rem;
+    margin: 0
+}
+
+section:nth-child(even) {
+    background: #407376
+}
+
+section:nth-child(even) article.content,
+section:nth-child(even) article.content h2 {
+    color: white;
+}
+
+.separator {
+    height: 1px;
+    background: linear-gradient(to right, #fcfcfc, #407376, #fcfcfc);
+    margin: 50px 0;
+}
+
+.text-green {
+    color: #407376
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+section span.icon {
+    display: none;
+}
+
 @keyframes bajar {
     0% {
         top: 0;
@@ -169,6 +244,9 @@ header#Header {
 }
 
 @media (min-width:1400px) {
+    body {
+        font-size: 1.4rem;
+    }
     .image:nth-child(2) .item-img-1 {
         left: -400px;
     }
@@ -218,7 +296,48 @@ header#Header {
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:1200px) {
+    #slider .image-text {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:980px) {
+    .slider-item {
+        -webkit-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        -moz-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        -ms-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+    }
+    .item-img-1,
+    .item-img-2 {
+        position: absolute;
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        -moz-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        -ms-transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+        transform: translate3d(0, 0, 0) skew(0deg, 0deg);
+    }
+    .slider-content {
+        position: absolute;
+        left: 50px;
+    }
+    .image:last-child .image-text {
+        left: -92px;
+    }
+    .image:hover .image-text {
+        left: 8%;
+    }
+    section article.content h2 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width:780px) {
+    #slider,
+    .slider-content,
+    .slider-item,
     .item-img-1,
     .item-img-2 {
         height: 450px;
@@ -230,7 +349,13 @@ header#Header {
         left: -50px;
     }
     .image:hover .image-text {
-        left: 5%;
+        left: 12%;
+    }
+    .image:first-child .image-text {
+        left: 0px;
+    }
+    .image:first-child:hover .image-text {
+        left: 20%;
     }
     .image:nth-child(2) .item-img-2 {
         background-position-x: -650px!important;
@@ -246,16 +371,57 @@ header#Header {
     }
 }
 
-.flecha polyline {
-    fill: none;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
+@media (max-width:680px) {
+    #slider,
+    .logos-left p,
+    header .bajar {
+        display: none;
+    }
+    .logos {
+        display: flex;
+        position: static;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+    .logos-left {
+        float: left;
+        width: 200px;
+        height: auto;
+        padding-right: 0;
+    }
+    .logos-right {
+        float: right;
+        width: 200px;
+        height: 100%;
+        padding-right: 0;
+    }
+    .logos img {
+        width: 50%;
+    }
+    section article.content h2 {
+        font-size: 4rem;
+    }
+    section span.icon {
+        display: block;
+        float: left;
+        display: block;
+        width: 52px;
+        margin-right: 10px;
+    }
+    section article {
+        width: 100% !important;
+    }
+    section .image {
+        display: none;
+    }
 }
 
-.flecha.blanco polyline {
-    stroke: #FFFFFF;
-}
-
-.flecha.verde polyline {
-    stroke: #407376;
+@media (max-width:350px) {
+    section article.content h2 {
+        font-size: 3rem;
+    }
+    section span.icon {
+        width: 38px;
+    }
 }

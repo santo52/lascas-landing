@@ -1,3 +1,9 @@
+function goToTag(self) {
+    $('html, body').animate({
+        scrollTop: $($(self).attr("data-href")).offset().top
+    }, 500);
+}
+
 $(document).ready(function() {
     $(".image").width($("#slider").width() / 3.3);
 
@@ -58,6 +64,7 @@ $(document).ready(function() {
     })
 
     $(".image").click(function() {
-        window.open($(".image").attr("data-href") || "/");
+        goToTag(this);
     })
-})
+
+});
