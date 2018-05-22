@@ -6,6 +6,11 @@
 
 body {
     font-family: 'Exo', sans-serif;
+    font-weight: 200
+}
+
+img {
+    width: 100%;
 }
 
 .logos img {
@@ -23,8 +28,17 @@ header#Header {
     overflow: hidden;
 }
 
+.section-container {
+    max-width: 1600px;
+    margin: auto;
+}
+
 .hidden {
     display: none;
+}
+
+.regular {
+    font-weight: 400
 }
 
 #slider {
@@ -181,6 +195,11 @@ section {
     padding: 30px;
     position: relative;
     overflow: hidden;
+    padding-bottom: 100px;
+}
+
+section:last-child {
+    padding-bottom: 30px;
 }
 
 section article {
@@ -231,6 +250,34 @@ section span.icon {
     display: none;
 }
 
+#sponsors {
+    margin-top: 50px;
+    display: flex;
+    width: 100%;
+}
+
+#sponsors .sponsor-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+    border-right: 1px solid gray;
+}
+
+#sponsors .sponsor-logo:last-child {
+    border: none;
+}
+
+.firmas {
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+.firmas div {
+    width: 50%;
+    float: left
+}
+
 @keyframes bajar {
     0% {
         top: 0;
@@ -247,6 +294,15 @@ section span.icon {
     body {
         font-size: 1.4rem;
     }
+    .image .image-text {
+        left: 9%;
+    }
+    .image:first-child .image-text {
+        left: 25%;
+    }
+    .image:hover .image-text {
+        left: 30%;
+    }
     .image:nth-child(2) .item-img-1 {
         left: -400px;
     }
@@ -255,7 +311,7 @@ section span.icon {
         left: -320px;
     }
     .image:last-child .image-text {
-        left: 0px;
+        left: -70px;
     }
     .image:last-child:hover .image-text {
         left: 20%;
@@ -267,10 +323,10 @@ section span.icon {
         left: 10%;
     }
     .image-text {
-        left: -10%;
+        left: -2%;
     }
     .image:last-child .image-text {
-        left: -115px;
+        left: -85px;
     }
     .image:hover .image-text {
         left: 20%;
@@ -369,6 +425,9 @@ section span.icon {
     .image:nth-child(4) .item-img-2 {
         background-position-x: -550px!important;
     }
+    #sponsors .sponsor-logo {
+        padding: 0 50px;
+    }
 }
 
 @media (max-width:680px) {
@@ -414,6 +473,27 @@ section span.icon {
     }
     section .image {
         display: none;
+    }
+    .firmas {
+        padding: 30px 0;
+    }
+    .firmas div {
+        width: 100%;
+        margin-top: 30px;
+    }
+    #sponsors {
+        margin-top: 0;
+        flex-direction: column;
+    }
+    #sponsors .sponsor-logo {
+        border: none;
+        padding: 30px;
+        height: 300px;
+    }
+    #sponsors .sponsor-logo img {
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
