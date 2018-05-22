@@ -17,6 +17,10 @@ img {
     width: 100%;
 }
 
+.logos .logos-right img {
+    width: 50%;
+}
+
 main#main {
     max-width: 100%;
     overflow-x: hidden;
